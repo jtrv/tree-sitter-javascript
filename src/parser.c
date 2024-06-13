@@ -6096,7 +6096,6 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       ACCEPT_TOKEN(sym_number);
       ADVANCE_MAP(
         '.', 308,
-        '0', 302,
         '_', 122,
         'n', 299,
         'B', 118,
@@ -6108,7 +6107,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
         'X', 127,
         'x', 127,
       );
-      if (('1' <= lookahead && lookahead <= '9')) ADVANCE(301);
+      if (('0' <= lookahead && lookahead <= '9')) ADVANCE(302);
       END_STATE();
     case 301:
       ACCEPT_TOKEN(sym_number);

@@ -1054,7 +1054,7 @@ module.exports = grammar({
 
       const decimalIntegerLiteral = choice(
         '0',
-        seq(optional('0'), /[1-9]/, optional(seq(optional('_'), decimalDigits))),
+        seq(/[1-9]/, optional(seq(optional('_'), decimalDigits))),
       );
 
       const decimalLiteral = choice(

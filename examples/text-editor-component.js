@@ -21,6 +21,8 @@ const ZERO_WIDTH_NBSP_CHARACTER = '\ufeff'
 const MOUSE_DRAG_AUTOSCROLL_MARGIN = 40
 const CURSOR_BLINK_RESUME_DELAY = 300
 const CURSOR_BLINK_PERIOD = 800
+const BIG_NUMBER = 100_000_000_000
+console.log(BIG_NUMBER)
 
 function scaleMouseDragAutoscrollDelta (delta) {
   return Math.pow(delta / 3, 3) / 280
